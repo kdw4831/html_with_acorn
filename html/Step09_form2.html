@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form2.html</title>
+
+    <style>
+        .container{
+            width: 768px;
+            margin:0 auto; /*위, 아래 마진은 0 좌, 우  마진은 auto*/
+        }
+
+        textarea{
+            width: 100%; /*부모 요소가 확보하고 있는 폭울 100%로 확인하겠다 라는 의미*/
+            height: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>회원 가입 폼입니다.</h1>
+        <form action="signup.jsp">
+              <!-- 아래와 같다 -->
+            <!-- <br>
+            <label>
+                이메일
+                <input type="text" name="email">
+            </label> -->
+
+            <!--아이디를 활용하는 법과 레이블안에 자식요소를 사용하는 방법-->
+            
+            <label for="email">이메일</label>
+            <input type="text" id="email" name="email"><br>
+
+            <fieldset>
+                <legend>성별 선택</legend>
+                <label>
+
+                    <!-- 미리체크 표시checked -->
+                    <input type="radio" name="gender" value="man" checked> 남자
+                </label>
+                
+    
+                <label> 
+                    <input type="radio" name="gender"  value="woman"> 여자
+                </label>
+            </fieldset>
+
+
+            <fieldset>
+                <legend>취미 정보 선택</legend>
+                <label>
+                    <input type="checkbox" name="hobby" value="soccer" checked> 축구
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobby" value="baking"> 베이킹
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobby" value="piano"> 피아노
+                </label>
+
+                <label>
+                    <input type="checkbox" name="hobby" value="etc"> 기타
+                </label>
+            </fieldset>
+
+            
+
+
+
+            <!--name은 서버에서 필요한 값 동시에 
+            name 속성값이 똑같아야지 그룹이 묶임 남녀를 
+            기준으로 하면 하나만 선택 되게 할 수 있음
+            값이 다르면 안됨-->
+
+            
+            <label for="job">직업</label>
+            <select name="job" id="job">
+                <option value="">선택</option>
+                <option value="programmer">프로그래머</option>
+                <option value="doctor">닥터</option>
+                <option value="pianist">피아니스트</option>
+                <option value="etc">기타</option>
+            </select>
+
+
+
+            <br>
+                 <label for="lunch">점심선택</label>
+                <!-- option에 value가 없으면 innerText가 전송된다. -->
+                <select name="lunch" id="lunch">
+                    <optgroup label="분식">
+                        <option>쫄면</option>
+                        <option>라면</option>
+                        <option>김밥</option>
+                    </optgroup>
+                    <optgroup label="중식">
+                        <option>자장면</option>
+                        <option>짬뽕</option>
+                        <option>군만두</option>
+                    </optgroup>
+                </select>
+                <br>
+
+                <label for="myFile">첨부파일</label>
+                <input type="file" id="myFile" name="myFile">
+                <br>
+                <label for="comment">하고 싶은 말</label>
+                <br>
+                <textarea name="comment" id="comment"></textarea>
+
+
+
+            <br>
+            <button type="submit">가입</button>
+
+
+          
+        </form>
+    </div>
+</body>
+</html>
