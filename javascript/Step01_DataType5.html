@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType5.html</title>
+</head>
+<body>
+    <h1>javascript 데이터 type</h1>
+    <p><strong>array</strong>type</p>
+    <script>
+        // 배열에는 주로 한가지 type의 데이터만 담는게 일반적이다.
+        
+        let nums=[10,20,30,40,50];
+        let names=["김구라", "해골","원숭이","주뎅이","덩어리"];
+        let data=[true, true,false, false, true];
+
+        /*
+            회원 한명의 정보는 번호, 이름,주소로 이루어져 있다.
+            회원 여러명의 정보를 순서대로 관리하려면 어떤 모양이 될가?
+
+            sample로  회원3명의 정보를 배열에 순서대로 보관해보세요
+        */
+
+        // for(i=0; i<5; i++){
+        //     let mem(i)={nums:num[i], names:names[i], data:data[i]}
+        //     console.log("mem"+i+)
+        // }
+
+        // let mem1={nums:nums[0], names:names[0], data:data[0]}
+        // let mem2={nums:nums[1], names:names[1], data:data[1]}
+        // let mem3={nums:nums[2], names:names[2], data:data[2]}
+     
+        
+        // let members=[mem1,mem2,mem3]
+
+        let members=[
+            {num:1, name:"김구라",addr:"노량진"},
+            {num:2, name:"해골",addr:"행신동"},
+            {num:3, name:"원숭이",addr:"동물원"},
+        ]
+
+
+        //array type
+        let a=members;
+        //object type
+        let b=members[0];
+        //number type 10
+        let c=members[0].num;
+        //string type 김구라
+        let d=members[0].name;
+        //string type 노량진
+        let e=members[0].addr
+    </script>
+    
+</body>
+</html>

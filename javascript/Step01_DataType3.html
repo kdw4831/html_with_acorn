@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType3.html</title>
+</head>
+<body>
+    <h1>javascript 데이타 type</h1>
+    <p><strong>object</strong> type</p>
+
+    <script>
+        /*
+        한명의 회원정보를 다루고자 한다.
+        번호, 이름, 남자인지 여부
+        */
+
+        //번호 1이고 이름은 김구라이고 성별은 남자인 회원의 정보를 
+        //변수 3개에 각각 담아 보세요.
+        let num = 1;
+        let name = "김구라";
+        // let gender = "남자" =="남자"; 
+        let isMan=true;
+
+        /*한줄로 작성*/
+        let mem1={num:1,name:"김구라",isMan:true};
+        /*여러줄로 작성*/
+        let  mem2={
+            num:2,
+            name:"해골",
+            isMan:false
+
+        };
+
+        //object에 데이터를 넣을 때 미리 만들어진 변수명으로 참조해서 넣을 수 있다.
+        let mem3={num:num, name:name, isMan:isMan};/*이전 것들은  key:value 였잖아 이부분은 value 부분이 변수로 대체*/
+        //위의 표현식을 줄여서 아래와 같이 작성할 수도 있다.
+        let mem4={num,name,isMan};
+    
+    
+        //a는 object type
+        let a=mem1;//mem1에 있는 object type 값을 a에 복사
+        //b는 number type
+        let b=mem1.num;
+        //c는 string type
+        let c=mem1.name;
+        //d는 boolean type
+        let d=mem1.isMan;
+
+        //빈 object를 만들고 나중에 필요에 따라서 데이터를 추가할 수 있다.
+        let mem5={};
+        mem5.num=3;
+        mem5.name="원숭이";
+        mem5.isMan=true;
+
+        //이미 만들어져 있는 object에 저장된 값 수정하기
+        mem1.num=999
+        mem1.name="킹 정 호";
+
+    </script>
+
+</body>
+</html>

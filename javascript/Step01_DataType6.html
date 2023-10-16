@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_DataType6.html</title>
+</head>
+<body>
+    <h1>javascript 데이터 type</h1>
+    <p><strong>function</strong> type</p>
+    <button onclick="keepElephant()">코끼리를 냉장고에 넣기</button>
+    <script>
+        let a={};
+        let b=[];
+       
+
+        let keepElephant= function(){/*function 과 let은 예약어이다.*/
+            //코끼리를 냉장고에 넣는 작업 함수 밖이면? (페이지 로딩시점에 들감)
+            console.log("냉장고 문을 연다");
+            console.log("코끼리를 집어 넣는다.");
+            console.log("냉장고 문을 닫는다.")
+        };//변수에 대입해서 호출하는 방법은 c()
+
+        //function은 참조도 할 수 있고 호출도 할 수 있다.
+
+        /*
+        keepElephant() 호출!!
+
+        let a= keepElephant;  참조
+        */
+
+
+    </script>
+</body>
+</html>
