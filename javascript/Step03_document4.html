@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_document4.html</title>
+    <style>
+        .box{
+            /*
+                transition : transition 효과를 적용할 css property, 적용시간, timing function(변화율)
+                transition:  width 1s linear      가로부분에 적용   linear:일정한 비율로 변화를 해라아라는 뜻
+                transition : height is ease-out    세로부분에 transition적용    ease-out 신속히 출발해서 천천히 멈춘다.
+                transition : all is ease-out;    모든 곳에 transition 효과적용
+            */
+
+            width: 100px;
+            height: 100px;
+            border:1px solid red;
+            background-color: yellow;
+            cursor: pointer;
+            transition:all 0.5s linear   /*animation 효과*/
+        }
+    </style>
+</head>
+<body>
+    <div class="box">click me!</div>
+    
+
+    <script>
+        let sum=100;
+        
+        // .box div를 클릭했을 때 width, height를 2배로 변경해보세요
+        document.querySelector(".box").addEventListener("click",()=>{
+            sum =sum*2;
+            document.querySelector(".box").style.width=`${sum}px`
+            document.querySelector(".box").style.height=`${sum}px`
+        })
+    </script>
+</body>
+</html>

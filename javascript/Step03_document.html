@@ -9,14 +9,46 @@
     <!-- p(p)*3 tab-->
     <h1>document object 사용해보기</h1>
     <p id="one">p1</p>
-    <p id="two">p2</p>
-    <p id="three">p3</p>
+    <p id="two" class="my-class">p2</p>
+    <p id="three" class="my-class">p3</p>
+    <input type="text" id="inputEmail" placeholder="이메일 입력 ...">
+    <input type="text" id="inputMsg" placeholder="메세지 입력...">
+    <br>
+    
+    <button id="myBtn">눌러보셍</button>
+        
+    <button id="change">바꾸기</button>
+
+    <button id="changeColor">색상 바꾸기</button>
+
 
     
     <script>
         //querySelector로 선택자(# , .)를 문자열로 전달
 
+        // id가 myBtn인 요소에 "click" 이벤트가 발생했을 때 실행할 함수 등록
+        // .addEventListner("이벤트 명",callback 함수)
+        
+        //   여기서 참조되는 객체에|        이런 종류의 이벤트 발생시|        위 함수가 자동 호출된다.          
 
+        document.querySelector("#myBtn").addEventListener("click",() => {
+            console.log("버튼을 눌렀네요")
+
+        })
+
+       
+        // 바꾸기 버튼을 눌렀을때 h1 요소의 innerText를 "안녕하세요"로 변경되도록 프로그래밍 해 보세요
+        document.querySelector("#change").addEventListener("click",()=>{
+            document.querySelector("h1").innerText="안녕하세요";
+        })
+
+        // 색상 바꾸기 버튼을 눌렀을 때 h1 요소의 글자색을 "blue"로 변경하기
+        document.querySelector("#changeColor").addEventListener("click",()=>{
+            document.querySelector("h1").style.color="blue"
+            document.querySelector("h1").style.backgroundColor="yellow"
+            //글자 크기도 50px로 변경해 보세요
+            document.querySelector("h1").style.fontSize="50px"
+        })
 
     </script>
     
